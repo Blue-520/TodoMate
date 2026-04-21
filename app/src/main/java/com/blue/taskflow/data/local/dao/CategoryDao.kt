@@ -17,8 +17,8 @@ interface CategoryDao {
     suspend fun deleteCategory(category: CategoryEntity)
 
     @Query("select * from categories")
-    suspend fun queryCategories(categories: List<CategoryEntity>): Flow<List<CategoryEntity>>
+    fun queryCategories(): Flow<List<CategoryEntity>>
 
     @Query("select * from categories where id = :categoryId")
-    suspend fun queryCategory(categoryId: Long): Flow<CategoryEntity>
+    fun queryCategory(categoryId: Long): Flow<CategoryEntity>
 }

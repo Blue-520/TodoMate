@@ -3,17 +3,14 @@ package com.blue.taskflow.ui.screen
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
+@Composable
+fun home(){
 
-class home {
+}
 
-    @Composable
-    fun acfse(){
 
-    }
-
-    @Preview
-    @Composable
-    fun aaa(){
-        acfse()
-    }
+@Composable
+@Preview
+fun getHome(){
+    home()
 }
