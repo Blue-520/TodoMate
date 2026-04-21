@@ -26,7 +26,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun login(){
+fun login(
+    modifier: Modifier = Modifier
+){
 
     var account: String by remember { mutableStateOf("") }
     var password: String by remember { mutableStateOf("") }
@@ -44,12 +46,7 @@ fun login(){
             onValueChange = {
                 account = it
             },
-            placeholder = {
-                Text(
-                    text = "请输入账号",
-                    modifier = Modifier.align(Alignment.CenterHorizontally)
-                )
-            },
+            placeholder = { Text(text = "请输入账号") },
             shape = RoundedCornerShape(10.dp),
             colors = TextFieldDefaults.colors(
                 focusedIndicatorColor = Color.Transparent,

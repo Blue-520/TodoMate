@@ -13,7 +13,7 @@ import com.blue.taskflow.data.local.entity.TaskEntity
 abstract class AppDatabase: RoomDatabase() {
 
     abstract fun taskDao():TaskDao
-    abstract fun category(): CategoryDao
+    abstract fun categoryDao(): CategoryDao
 
     companion object{
         @Volatile

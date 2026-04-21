@@ -24,12 +24,12 @@ interface TaskDao {
     @Update
     suspend fun update(task: TaskEntity)
 
-    @Query("update tasks set title = :title, description = :description")
-    suspend fun updateTaskById(title: String, description: String)
+    /*@Query("update tasks set title = :title, description = :description")
+    suspend fun updateTaskById(title: String, description: String)*/
 
     //查询任务
     @Query("select * from tasks where id = :taskId")
-    suspend fun getTaskById(taskId: Long): TaskEntity?
+    suspend fun queryTaskById(taskId: Long): TaskEntity?
 
     @Query("select * from tasks order by create_time desc")
     fun queryAllTasks(): Flow<List<TaskEntity>>
